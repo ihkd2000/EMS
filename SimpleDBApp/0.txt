@@ -1,0 +1,1 @@
+﻿ Now lets collect all of those forms to be accessed and displayed in main form which is MDI

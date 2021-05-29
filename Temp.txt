@@ -1,0 +1,91 @@
+Connection
+----------------
+    Function getConnection() As SqlConnection
+        Dim cnString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ApplicationDev\Source\Repos\SimpleDBApp\SimpleDBApp\EmployeeMSDB.mdf;Integrated Security=True"
+
+        Dim con As New SqlConnection
+
+        ' Using con
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ApplicationDev\Source\Repos\SimpleDBApp\SimpleDBApp\EmployeeMSDB.mdf;Integrated Security=True"
+        con.Open()
+        Return con
+        ' End Using
+    End Function
+
+--------------------
+
+ Function getDataTable(sqlString As String) As DataTable
+        Dim dbc As New DBCon
+        Dim con As New SqlConnection
+        Using con
+            con = dbc.getConnection()
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+            Dim dt As New DataTable
+            Using da As New SqlDataAdapter(sqlString, con)
+                da.Fill(dt)
+                Return dt
+            End Using
+        End Using
+    End Function
+
+    Function getDataAdapter(sqlString As String) As SqlDataAdapter
+        Dim dbc As New DBCon
+        Dim con As New SqlConnection
+        Using con
+            con = dbc.getConnection()
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+            Dim dt As New DataTable
+            Dim da As New SqlDataAdapter(sqlString, con)
+            Return da
+            ' End Using
+        End Using
+    End Function
+
+    Function getCommand(sqlString As String) As SqlCommand
+        Dim dbc As New DBCon
+        Dim con As New SqlConnection
+        Using con
+            con = dbc.getConnection()
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            Dim cmd As New SqlCommand(sqlString, con)
+            Return cmd
+            ' End Using
+        End Using
+    End Function
+
+    'This function accepts on string parameter that represents the SQL statement of any statement to retrieve 
+    ' if the record exists or not
+    Function getReader(sqlString As String) As Integer
+        'Define object class of type DBCon that handles database connectivity 
+        Dim dbc As New DBCon
+
+        'WE define a variable of type SqlConnection and then assign class connect to it
+        Dim con As New SqlConnection
+
+
+        Using con 'We are using the [Using] to make sure that the object has been release after successfuly operation
+
+            con = dbc.getConnection
+
+            ' We used Sql Command to read the sql statement and operate against the database with the connection
+            ' defined earlier
+            Using cmd As New SqlCommand(sqlString, con)
+
+                'No we are reading the data base and returning a digit (0) for nothing found (1) for one record found
+                Dim x As Integer = cmd.ExecuteScalar
+                'dr.Close()
+                Return x
+            End Using
+        End Using
+    End Function
+
+
+
+	 Me.Text = UsersList.CurrentRow.Cells(1).Value

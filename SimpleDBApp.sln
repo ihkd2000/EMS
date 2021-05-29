@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleDBApp", "SimpleDBApp\SimpleDBApp.vbproj", "{EC0461F9-A35A-4975-BA3A-3A967E81E854}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F53E578A-185B-446C-8DE1-0B3CE404D8D5}"
+	ProjectSection(SolutionItems) = preProject
+		SimpleDBApp\class.txt = SimpleDBApp\class.txt
+		Database Tables.txt = Database Tables.txt
+		readme.txt = readme.txt
+		Temp.txt = Temp.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC0461F9-A35A-4975-BA3A-3A967E81E854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0461F9-A35A-4975-BA3A-3A967E81E854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0461F9-A35A-4975-BA3A-3A967E81E854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0461F9-A35A-4975-BA3A-3A967E81E854}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D019651-BB26-435C-AED7-6EF69CD732B7}
+	EndGlobalSection
+EndGlobal

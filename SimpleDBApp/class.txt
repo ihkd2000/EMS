@@ -1,0 +1,76 @@
+﻿
+DBConnection
+---------------------
+ Function getConnection() As SqlConnection
+        Dim cnString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ApplicationDev\Source\Repos\SimpleDBApp\SimpleDBApp\EmployeeMSDB.mdf;Integrated Security=True"
+
+        Dim con As New SqlConnection
+
+        ' Using con
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ApplicationDev\Source\Repos\SimpleDBApp\SimpleDBApp\EmployeeMSDB.mdf;Integrated Security=True"
+        con.Open()
+        Return con
+        ' End Using
+    End Function
+
+
+DataReader
+---------------------
+ Function getReader(sqlString As String) As SqlDataReader
+        Dim dbc As New DBCon
+
+        Dim con As New SqlConnection
+
+        Using con
+            con = dbc.getConnection
+
+
+            Using cmd As New SqlCommand(sqlString, con)
+
+                Dim dr As SqlDataReader = cmd.ExecuteReader
+                'dr.Close()
+                Return dr
+            End Using
+        End Using
+    End Function
+
+	Insert into database
+	--------------------------
+
+	  Dim con As New DBCon
+
+
+        Dim cmd As New SqlCommand("insert into department(depname) output inserted.depid values(@depname)", con.getConnection())
+
+        cmd.Parameters.AddWithValue("@depname", "accounts")
+
+        MessageBox.Show(Convert.ToInt32(cmd.ExecuteScalar()))
+
+		Update database
+		----------------
+		  Dim con As New DBCon
+
+
+        Dim cmd As New SqlCommand("update into department(depname) output inserted.depid values(@depname)", con.getConnection())
+
+        cmd.Parameters.AddWithValue("@depname", "الحسابات")
+
+        MessageBox.Show(Convert.ToInt32(cmd.ExecuteScalar()))
+
+		----------Image
+		 Dim dig As New OpenFileDialog
+        If dig.ShowDialog = Windows.Forms.DialogResult.OK Then
+            ' EmployeePicture.Image.Save("c:\" & dig.FileName, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Dim myImage As Bitmap
+            myImage = New Bitmap(dig.FileName)
+            EmployeePicture.Image = CType(myImage, Bitmap)
+            EmployeePicture.SizeMode = PictureBoxSizeMode.Zoom
+            Dim imageName = Year(Now) & Month(Now) & Second(Now) & Hour(Now) & Minute(Now)
+
+            myImage.Save(Path.GetFullPath(System.AppDomain.CurrentDomain.BaseDirectory) & "\images\" & imageName & ".jpg", ImageFormat.Jpeg)
+
+			-------------------- DB
+
+			Imports System.Data.SqlClient
+
+ 

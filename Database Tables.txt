@@ -1,0 +1,29 @@
+CREATE TABLE [dbo].[Department] (
+    [DepID]       INT           IDENTITY (1, 1) NOT NULL,
+    [DepName]     NVARCHAR (25) NULL,
+    [Description] NVARCHAR (75) NULL,
+    PRIMARY KEY CLUSTERED ([DepID] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[Employee] (
+    [EmpNo]    INT            IDENTITY (1, 1) NOT NULL,
+    [EmpName]  NVARCHAR (50)  NULL,
+    [Address]  NVARCHAR (150) NULL,
+    [City]     NVARCHAR (20)  NULL,
+    [Country]  NVARCHAR (30)  NULL,
+    [MobileNo] NVARCHAR (10)  NULL,
+    [Salary]   DECIMAL (18)   NULL,
+    [HireDate] DATE           NULL,
+    [EmpImage] NVARCHAR (20)  NULL,
+    PRIMARY KEY CLUSTERED ([EmpNo] ASC)
+);
+
+CREATE TABLE [dbo].[muser] (
+    [userid]   INT           IDENTITY (1, 1) NOT NULL,
+    [username] NVARCHAR (15) NULL,
+    [password] NVARCHAR (50) NULL,
+    [empno]    INT           NULL,
+    PRIMARY KEY CLUSTERED ([userid] ASC)
+);
