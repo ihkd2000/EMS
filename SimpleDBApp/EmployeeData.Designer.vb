@@ -56,7 +56,7 @@ Partial Class EmployeeDataForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(51, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 16)
+        Me.Label1.Size = New System.Drawing.Size(99, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Employee Name"
         '
@@ -65,7 +65,7 @@ Partial Class EmployeeDataForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(52, 192)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 16)
+        Me.Label2.Size = New System.Drawing.Size(28, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "City"
         '
@@ -74,7 +74,7 @@ Partial Class EmployeeDataForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(51, 161)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 16)
+        Me.Label3.Size = New System.Drawing.Size(53, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Address"
         '
@@ -83,7 +83,7 @@ Partial Class EmployeeDataForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(268, 192)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 16)
+        Me.Label4.Size = New System.Drawing.Size(51, 16)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Country"
         '
@@ -92,7 +92,7 @@ Partial Class EmployeeDataForm
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(52, 103)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 16)
+        Me.Label5.Size = New System.Drawing.Size(67, 16)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Mobile No."
         '
@@ -101,7 +101,7 @@ Partial Class EmployeeDataForm
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(268, 103)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 16)
+        Me.Label6.Size = New System.Drawing.Size(60, 16)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Hire Date"
         '
@@ -110,7 +110,7 @@ Partial Class EmployeeDataForm
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(52, 249)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 16)
+        Me.Label7.Size = New System.Drawing.Size(68, 16)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Comments"
         '
@@ -225,7 +225,7 @@ Partial Class EmployeeDataForm
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(51, 222)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 16)
+        Me.Label8.Size = New System.Drawing.Size(80, 16)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Departments"
         '
@@ -234,7 +234,7 @@ Partial Class EmployeeDataForm
         Me.FindEmployeeLink.AutoSize = True
         Me.FindEmployeeLink.Location = New System.Drawing.Point(374, 72)
         Me.FindEmployeeLink.Name = "FindEmployeeLink"
-        Me.FindEmployeeLink.Size = New System.Drawing.Size(91, 16)
+        Me.FindEmployeeLink.Size = New System.Drawing.Size(90, 16)
         Me.FindEmployeeLink.TabIndex = 14
         Me.FindEmployeeLink.TabStop = True
         Me.FindEmployeeLink.Text = "Find Employee"
@@ -244,7 +244,7 @@ Partial Class EmployeeDataForm
         Me.Salary.AutoSize = True
         Me.Salary.Location = New System.Drawing.Point(52, 132)
         Me.Salary.Name = "Salary"
-        Me.Salary.Size = New System.Drawing.Size(44, 16)
+        Me.Salary.Size = New System.Drawing.Size(43, 16)
         Me.Salary.TabIndex = 4
         Me.Salary.Text = "Salary"
         '
@@ -260,7 +260,7 @@ Partial Class EmployeeDataForm
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(51, 43)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(82, 16)
+        Me.Label9.Size = New System.Drawing.Size(81, 16)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Employee No"
         '
@@ -305,7 +305,7 @@ Partial Class EmployeeDataForm
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "EmployeeDataForm"
-        Me.Text = "Employee Data"
+        Me.Text = "Employee Information Data"
         CType(Me.EmployeePicture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
