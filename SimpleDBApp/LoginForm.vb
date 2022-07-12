@@ -4,7 +4,7 @@ Public Class LoginForm
 
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
-        ' Defining variables 
+        ' Defining variables Update 2022/07
         'Dim username As String = textUsername.Text
         'Dim password As String = textPassword.Text
 
