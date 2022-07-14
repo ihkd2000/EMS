@@ -1,4 +1,4 @@
-Step (1)
+Step (1).
 We will create the database with the name of EmployeeDB
 
 Step (2)
